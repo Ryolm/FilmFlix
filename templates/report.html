@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generate Report</title>
+</head>
+<body>
+    <h1>Generate Report</h1>
+    <form action="/report" method="post">
+        <label for="search_field">Filter By:</label>
+        <select name="search_field" id="search_field">
+            <option value="title">Title</option>
+            <option value="yearReleased">Year Released</option>
+            <option value="rating">Rating</option>
+            <option value="duration">Duration</option>
+            <option value="genre">Genre</option>
+        </select>
+        <label for="search_value">Search For:</label>
+        <input type="text" id="search_value" name="search_value">
+        <input type="submit" value="Generate Report">
+    </form>
+    <br>
+    {% if records %}
+        <table style="border: 1px solid black;">
+            <tr>
+                <th>Title</th>
+                <th>Year Released</th>
+                <th>Rating</th>
+                <th>Duration</th>
+                <th>Genre</th>
+            </tr>
+            {% for record in records %}
+            <tr>
+                <td>{{ record[1] }}</td>
+                <td>{{ record[2] }}</td>
+                <td>{{ record[3] }}</td>
+                <td>{{ record[4] }}</td>
+                <td>{{ record[5] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>No records found.</p>
+    {% endif %}
+</body>
+</html>

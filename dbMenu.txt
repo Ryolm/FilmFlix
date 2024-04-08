@@ -1,0 +1,8 @@
+The Database Main Menu options
+Enter:
+1. Print all records
+2. Add a record
+3. Update a record
+4. Delete a record
+5. Select report 
+6. Exit the DB App

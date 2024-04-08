@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FilmFlix Database</title>
+</head>
+<body>
+    <h1>FilmFlix Database</h1>
+    <nav>
+        <a href="/add">Add Record</a> |
+        <a href="/delete">Delete Record</a> |
+        <a href="/update">Update Record</a> |
+        <a href="/report">Generate Report</a>
+    </nav>
+    <table style="border: 1px solid black;">
+        <tr>
+            <th>Film ID</th>
+            <th>Title</th>
+            <th>Year Released</th>
+            <th>Rating</th>
+            <th>Duration</th>
+            <th>Genre</th>
+        </tr>
+        {% for record in records %}
+        <tr>
+            <td>{{ record[0] }}</td>
+            <td>{{ record[1] }}</td>
+            <td>{{ record[2] }}</td>
+            <td>{{ record[3] }}</td>
+            <td>{{ record[4] }}</td>
+            <td>{{ record[5] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

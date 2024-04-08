@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Record</title>
+</head>
+<body>
+    <h1>Update a Film Record</h1>
+    <form action="/update" method="post">
+        <label for="filmID">Film ID:</label>
+        <input type="number" id="filmID" name="filmID" required><br>
+        <label for="title">Film Title:</label>
+        <input type="text" id="title" name="title"><br>
+        <label for="yearReleased">Year Released:</label>
+        <input type="number" id="yearReleased" name="yearReleased"><br>
+        <label for="rating">Rating:</label>
+        <input type="text" id="rating" name="rating"><br>
+        <label for="duration">Duration:</label>
+        <input type="number" id="duration" name="duration"><br>
+        <label for="genre">Genre:</label>
+        <input type="text" id="genre" name="genre"><br>
+        <input type="submit" value="Update Record">
+    </form>
+</body>
+</html>

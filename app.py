@@ -77,5 +77,7 @@ def report():
         return render_template('report.html', records=[], search_field=None, search_value=None)
 
 # run the app if this file is executed directly
+import os
 if __name__ == "__main__":
-    app.run(debug=True)  # run the app in debug mode
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
